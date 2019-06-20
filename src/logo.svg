@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="80px" height="117px" viewBox="0 0 80 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
-    <title>Group 3</title>
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
@@ -19,7 +19,6 @@
                     </mask>
                     <use id="Combined-Shape" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
                 </g>
-                <path d="M30.024,105 L31.992,105 L28.008,116.28 L26.328,116.28 L23.496,108.168 L20.648,116.28 L18.968,116.28 L15,105 L17.08,105 L19.88,113.4 L22.824,105 L24.28,105 L27.144,113.448 L30.024,105 Z M42.216,116.28 L41.08,113.64 L35.592,113.64 L34.456,116.28 L32.376,116.28 L37.48,105 L39.16,105 L44.264,116.28 L42.216,116.28 Z M36.264,112.04 L40.392,112.04 L38.328,107.24 L36.264,112.04 Z M53.736,105 L55.832,105 L50.808,116.28 L49.128,116.28 L44.104,105 L46.232,105 L49.976,113.72 L53.736,105 Z M56.888,116.28 L56.888,105 L64.44,105 L64.44,106.632 L58.904,106.632 L58.904,109.736 L64.12,109.736 L64.12,111.352 L58.904,111.352 L58.904,114.648 L64.44,114.648 L64.44,116.28 L56.888,116.28 Z" id="WAVE" fill="#000000" fill-rule="nonzero" opacity="0.749883743"></path>
             </g>
         </g>
     </g>

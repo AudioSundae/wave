@@ -2,7 +2,9 @@
   height: 100%;
   width: 100%;
 }
-
+.flex {
+  flex: 1;
+}
 
 .col {
   @include flexbox;
