@@ -25,3 +25,20 @@ body, html {
   height: 100vh;
   width: 100vw;
 }
+.spinner {
+  @include transition(all, 200ms);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $c-lblue-10;
+  border-radius: 50%;
+  border-top-color: $c-lblue;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  -moz-animation: spin 1s ease-in-out infinite;
+  &.dark {
+  }
+}
+@keyframes spin { to { -webkit-transform: rotate(360deg);}}
+@-webkit-keyframes spin { to { -webkit-transform: rotate(360deg);}}
+@-moz-keyframes spin { to { -webkit-transform: rotate(360deg);}}
