@@ -1,5 +1,5 @@
 .nav-bar {
-  height: 80px;
+  height: 64px;
   width: 94%;
   padding-left: 3%;
   padding-right: 3%;
@@ -9,7 +9,8 @@
   > div {
     @include transition(all, 100ms);
     @include border-radius(6px);
-    height: 64px;
+    @include user-select(none);
+    height: 56px;
     width: 20%;
     position: relative;
     > img {

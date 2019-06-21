@@ -14,5 +14,9 @@ const config = {
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
 }
+let auth = firebase.auth()
+
+firebase.doSignOut = () => auth.signOut().then(function() {console.log("sign out success")}).catch(function(error) {console.log("sign out error")})
 
 export default firebase;
+export {config}

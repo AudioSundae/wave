@@ -15,27 +15,31 @@ export default props =>
       let img = `${icon}_${props.page === icon ? "" : "in"}active`
       return(
         <div key={index} className="col-c-c" onClick={() => props.onSwitchPage(icon)}>
-          <img className={cn({"active": icon === props.page})} src={
-            icon === "home"
-              ? home_active
-            : icon === "new"
-              ? new_active
-            : icon === "notifications"
-              ? notifications_active
-            : icon === "profile"
-              ? profile_active
-            : ""
+          <img className={cn({"active": icon === props.page})}
+            alt={icon}
+            src={
+              icon === "home"
+                ? home_active
+              : icon === "new"
+                ? new_active
+              : icon === "notifications"
+                ? notifications_active
+              : icon === "profile"
+                ? profile_active
+              : ""
           } />
-          <img className={cn({"active": icon !== props.page})} src={
-            icon === "home"
-              ? home_inactive
-            : icon === "new"
-              ? new_inactive
-            : icon === "notifications"
-              ? notifications_inactive
-            : icon === "profile"
-              ? profile_inactive
-            : ""
+          <img className={cn({"active": icon !== props.page})}
+            alt={icon} 
+            src={
+              icon === "home"
+                ? home_inactive
+              : icon === "new"
+                ? new_inactive
+              : icon === "notifications"
+                ? notifications_inactive
+              : icon === "profile"
+                ? profile_inactive
+              : ""
           } />
         </div>
       )

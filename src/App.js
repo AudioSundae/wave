@@ -1,29 +1,36 @@
 import React from 'react';
-import Home from './components/Structure';
-import Header from './components/Header';
+import Home from './components/Home';
+import Notifications from './components/Notifications';
+import Profile from './components/Profile';
 import Navbar from './components/Navbar';
 
 import withFirebase from './components/Firebase';
-import logo from './logo.svg';
 import './sass/main.scss';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      page: "home"
+      page: "notifications",
+      data: null
     }
   }
   switchPage = page => this.setState({page})
   render() {
-    let { user } = this.props,
-        { page } = this.state;
+    let { page } = this.state
+        // { user } = this.props;
     return(
       <div className="app col-fs-c">
-        <Header page={page} />
-        <Home>
-
-        </Home>
+        {
+          page === "home"
+            ? <Home {...this.props} />
+          : page === "notifications"
+            ? <Notifications {...this.props} />
+          : page === "profile"
+            ? <Profile {...this.props} />
+          : <div className="flex" />
+        }
+        <span>{this.state.data}</span>
         <Navbar page={page} onSwitchPage={this.switchPage} />
       </div>
     )
