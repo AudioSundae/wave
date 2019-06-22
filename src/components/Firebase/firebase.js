@@ -9,7 +9,10 @@ const config = {
   projectId: "wave-ddf6e",
   storageBucket: "wave-ddf6e.appspot.com",
   messagingSenderId: "795253427550",
-  appId: "1:795253427550:web:c14cace5e27dd504"
+  appId: "1:795253427550:web:c14cace5e27dd504",
+  discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/gmail/v3/rest"],
+  clientId: '795253427550-e7lvvtbellcidlur1p2kjvesle8tt7vl.apps.googleusercontent.com',
+  scope: 'https://www.googleapis.com/auth/gmail.readonly'
 };
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
