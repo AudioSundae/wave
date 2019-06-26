@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>account_a</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dexter-Version-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="account_a" fill-rule="nonzero">
+            <circle id="Oval-Copy" fill="#04BEFE" cx="10" cy="10" r="10"></circle>
+            <path d="M9.9708077,20 C12.777671,20 15.6007882,18.5574428 17.2071892,17.0303083 C18.8135902,15.5031737 13.4459718,13.3333333 9.9708077,13.3333333 C6.49564363,13.3333333 1.00210214,15.4171082 2.88163856,17.17504 C4.67438941,18.8518012 7.26993396,20 9.9708077,20 Z" id="Oval-3" fill="#4481EB"></path>
+            <circle id="Oval-Copy" fill="#4481EB" cx="10" cy="8.33333333" r="3.33333333"></circle>
+        </g>
+    </g>
+</svg>

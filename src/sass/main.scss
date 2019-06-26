@@ -19,8 +19,24 @@ body, html {
   font-size: 16px;
   color: $c-100;
   letter-spacing: 0px;
-  // background-color: $c-background;
+  background-color: $c-background;
 }
+input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  color: $c-100;
+  &::placeholder {
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    color: $c-20;
+  }
+}
+
 .app {
   height: 100vh;
   width: 100vw;

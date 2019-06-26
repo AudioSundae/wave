@@ -1,0 +1,36 @@
+.home-contacts {
+  @include border-radius(12px);
+  flex: 1;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 $c-10;
+  overflow: hidden;
+  > div {
+    @include transition(all, 200ms);
+    height: 56px;
+    width: calc(100% - 16px);
+    padding-left: 16px;
+    text-transform: capitalize;
+    box-shadow: 16px 1px 0 0 $c-3;
+    > div.img {
+      @include border-radius(50px);
+      height: 28px;
+      width: 28px;
+      background: linear-gradient(to bottom right, $c-blue, $c-lblue);
+      margin-right: 12px;
+    }
+    &.active {
+      background-color: $c-lblue;
+      box-shadow: none;
+      color: white;
+      > div.img {
+        background: rgba(255,255,255,.5);
+      }
+    }
+    &:not(.active) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

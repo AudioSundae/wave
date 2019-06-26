@@ -1,0 +1,12 @@
+.home-filters {
+  height: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
+  color: $c-25;
+  font-weight: 600;
+  width: calc(100% - 32px);
+  > span {
+    margin-top: 16px;
+  }
+}

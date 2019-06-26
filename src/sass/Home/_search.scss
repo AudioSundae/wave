@@ -1,0 +1,17 @@
+.home-search {
+  @include border-radius(12px);
+  height: 36px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgba(255,255,255,.10);
+  box-shadow: 0 4px 20px 0 $c-10;
+  > img {
+    margin-left: 12px;
+    margin-right: 10px;
+  }
+  > input {
+    padding-right: 12px;
+    height: 100%;
+    flex: 1;
+  }
+}

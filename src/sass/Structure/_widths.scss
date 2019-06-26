@@ -1,0 +1,23 @@
+.home-w-head {
+  width: 100%;
+  max-width: 950px;
+  min-width: 580px;
+}
+.home-w-l {
+  max-width: 375px;
+  min-width: 220px;
+  width: 40vw;
+}
+.home-w-r {
+  @include transition(all, 400ms);
+  max-width: 575px;
+  &.active {
+    width: 60vw;
+  }
+  &:not(.active) {
+    width: 0;
+  }
+}
+.home-w-c {
+  width: calc(100% - 32px);
+}

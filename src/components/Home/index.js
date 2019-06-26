@@ -1,7 +1,14 @@
 import React from 'react';
-import Header from '../Header';
+import Contact from '../Contact';
+import Contacts from './components/contacts';
+import Filters from './components/filters';
+import Search from './components/search';
 import person from '../../img/icons/person.svg';
 const cn = require('classnames')
+const data = [{"firstName": "matthew", "lastName": "kochakian"},
+  {"firstName": "alvin", "lastName": "yakitori"},
+  {"firstName": "jefferson", "lastName": "steelflex"},
+]
 export default class extends React.Component {
   constructor(props) {
     super(props)
@@ -17,22 +24,24 @@ export default class extends React.Component {
           // activeList
         } = this.state;
     return(
-      <div className="home-module col">
-        <Header />
-        <div className="home-list">
-          {["", "", "", "", "", "", "", "", ""].map((contact, index) =>
-            <div
-              className={cn(["row-fs-c", {"active": activeContact === index}])}
-              onClick={() => this.setActiveContact(index)}
-              key={index}
-            >
-              <img src={person} alt="person" />
-              <div className="col">
-                <p>[Firstname] [Lastname]</p>
-                <span>firstname@lastname.com</span>
-              </div>
-            </div>
-          )}
+      <div className="home-module flex row-c-c">
+        <div className="left home-w-l col">
+          <Search />
+          <Filters />
+          <Contacts contacts={data} onClick={this.setActiveContact} activeContact={activeContact} />
+        </div>
+        <div className={cn([
+          "right",
+          "home-w-r",
+          {
+            "active": activeContact !== "none"
+          }
+        ])}>
+        {
+          activeContact !== "none"
+            ? <Contact onClose={this.setActiveContact} />
+            : <div />
+        }
         </div>
       </div>
     )

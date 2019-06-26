@@ -1,17 +1,18 @@
 import React from 'react';
+import Header from './components/Header';
 import Home from './components/Home';
 import Notifications from './components/Notifications';
 import Profile from './components/Profile';
-import Navbar from './components/Navbar';
 
 import withFirebase from './components/Firebase';
 import './sass/main.scss';
+require("typeface-nunito-sans")
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      page: "notifications",
+      page: "home",
       data: null
     }
   }
@@ -21,6 +22,7 @@ class App extends React.Component {
         // { user } = this.props;
     return(
       <div className="app col-fs-c">
+        <Header page={page} onSwitchPage={this.switchPage} />
         {
           page === "home"
             ? <Home {...this.props} />
@@ -30,8 +32,6 @@ class App extends React.Component {
             ? <Profile {...this.props} />
           : <div className="flex" />
         }
-        <span>{this.state.data}</span>
-        <Navbar page={page} onSwitchPage={this.switchPage} />
       </div>
     )
   }
