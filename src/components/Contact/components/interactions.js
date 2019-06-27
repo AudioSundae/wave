@@ -6,7 +6,7 @@ import plus from '../../../img/icons/plus.svg';
 export default props =>
   <div className="interactions home-w-c-in">
     {["", "", "", "", ""].map((interaction, index) =>
-      <div className="interaction row-sb">
+      <div className="interaction row-sb" key={index}>
         <div className="date col-c">
           <span className="one">Apr 7</span>
           <span className="two">3:30pm</span>
