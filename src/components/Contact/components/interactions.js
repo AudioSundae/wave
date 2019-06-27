@@ -1,7 +1,6 @@
 import React from 'react';
 import Textarea from 'react-autosize-textarea';
 import calendar from '../../../img/icons/calendar.svg';
-import plus from '../../../img/icons/plus.svg';
 
 export default props =>
   <div className="interactions home-w-c-in">
