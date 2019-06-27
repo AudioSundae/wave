@@ -18,8 +18,8 @@ export default props => {
           </div>
           <Top {...props} />
           <Bio {...props} />
-          <Keywords {...props} />
           <Interactions {...props} />
+          <Keywords {...props} />
         </div>
       </div>
     : <div />

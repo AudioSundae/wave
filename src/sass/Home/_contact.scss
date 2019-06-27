@@ -10,7 +10,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     text-overflow: ellipsis;
-
+    padding-bottom: 48px;
+    margin-top: 16px;
     > div.x {
       right: -20px;
       top: -20px;
@@ -20,7 +21,7 @@
       }
     }
     > div.top-info {
-      padding-top: 36px;
+      padding-top: 28px;
       padding-left: 28px;
       padding-right: 28px;
       > div.img {
@@ -41,11 +42,22 @@
           }
           margin-bottom: 16px;
         }
-        > span {
-          font-size: 28px;
-          text-transform: capitalize;
+        > div.text {
+          > span {
+            text-transform: capitalize;
+            &.name {
+              font-size: 28px;
+            }
+            &.loc {
+              margin-top: -6px;
+              margin-left: 2px;
+              color: $c-50;
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
         }
-        > div {
+        > div.social {
           > div {
             @include transition(all, 200ms);
             margin-left: 16px;
@@ -62,6 +74,7 @@
     > input.bio {
       width: calc(100% - 120px);
       margin-left: 92px;
+      margin-top: 16px;
       color: $c-50;
     }
     > div.keywords {
@@ -71,30 +84,75 @@
       color: $c-25;
     }
     > div.interactions {
+      box-shadow: 0 -1px 0 0 $c-3, 0 1px 0 0 $c-3;
       margin-top: 36px;
+      padding-top: 16px;
+      padding-bottom: 36px;
       padding-left: 28px;
       padding-right: 28px;
+    }
+  }
+}
+.interaction {
+  margin-top: 24px;
+  > div.date {
+    margin-top: 10px;
+    color: $c-50;
+    font-size: 12px;
+    width: 76px;
+    > span.two {
+      color: $c-25;
+    }
+  }
+  > div:not(.date) {
+    @include border-radius(8px);
+    background-color: $c-background;
+    border: 1px solid $c-5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px $c-10;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    > textarea {
+      width: 100%;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: $c-50;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    > div.content {
+      height: 48px;
+      width: 100%;
 
-      > div {
-        margin-top: 16px;
-        width: calc(100% + 16px);
-        margin-left: -8px;
-        > div.content {
-          @include border-radius(8px);
-          height: 48px;
-          width: calc(100% - 32px);
-          padding-left: 16px;
-          padding-right: 16px;
-          background-color: white;
-          box-shadow: 0px 1px 6px $c-10;
-          > div {
-            margin-left: 12px;
-            > span.two {
-              margin-top: -4px;
-              font-size: 10px;
-              color: $c-50;
-            }
+      > div.left {
+        > img {
+          margin-right: 12px;
+        }
+        > div > span {
+          &.one {
+            font-weight: 600;
           }
+          &.two {
+            font-size: 12px;
+            color: $c-50;
+            margin-top: -3px;
+          }
+        }
+      }
+      > a.right {
+        @include transition(all, 200ms);
+        color: $c-blue;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          opacity: .75;
         }
       }
     }
