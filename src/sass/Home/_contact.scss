@@ -1,17 +1,102 @@
 .home-contact {
-  @include border-radius(12px);
+  @include border-radius(12px 12px 0 0);
   background-color: white;
   position: relative;
   box-shadow: 0 4px 20px 0 $c-10;
   margin-top: 120px;
   margin-left: 16px;
   margin-right: 16px;
-  > div.x {
-    right: -20px;
-    top: -20px;
-    position: absolute;
-    &:hover {
-      cursor: pointer;
+  > div {
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    > div.x {
+      right: -20px;
+      top: -20px;
+      position: absolute;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    > div.top-info {
+      padding-top: 36px;
+      padding-left: 28px;
+      padding-right: 28px;
+      > div.img {
+        @include border-radius(50px);
+        height: 48px;
+        width: 48px;
+        margin-right: 16px;
+        background: $c-5;
+      }
+      > div {
+        @include tabletandmobile {
+          @include flex-direction(column);
+          @include align-items(flex-start);
+          > div > div {
+            margin-top: 6px;
+            margin-right: 16px;
+            margin-left: 0 !important;
+          }
+          margin-bottom: 16px;
+        }
+        > span {
+          font-size: 28px;
+          text-transform: capitalize;
+        }
+        > div {
+          > div {
+            @include transition(all, 200ms);
+            margin-left: 16px;
+            &:hover {
+              cursor: pointer;
+            }
+            &:active {
+              opacity: .75;
+            }
+          }
+        }
+      }
+    }
+    > input.bio {
+      width: calc(100% - 120px);
+      margin-left: 92px;
+      color: $c-50;
+    }
+    > div.keywords {
+      margin-top: 36px;
+      padding-left: 28px;
+      padding-right: 28px;
+      color: $c-25;
+    }
+    > div.interactions {
+      margin-top: 36px;
+      padding-left: 28px;
+      padding-right: 28px;
+
+      > div {
+        margin-top: 16px;
+        width: calc(100% + 16px);
+        margin-left: -8px;
+        > div.content {
+          @include border-radius(8px);
+          height: 48px;
+          width: calc(100% - 32px);
+          padding-left: 16px;
+          padding-right: 16px;
+          background-color: white;
+          box-shadow: 0px 1px 6px $c-10;
+          > div {
+            margin-left: 12px;
+            > span.two {
+              margin-top: -4px;
+              font-size: 10px;
+              color: $c-50;
+            }
+          }
+        }
+      }
     }
   }
 }

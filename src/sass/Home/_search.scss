@@ -5,6 +5,11 @@
   width: 100%;
   background-color: rgba(255,255,255,.10);
   box-shadow: 0 4px 20px 0 $c-10;
+  @include tabletandmobile {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
   > img {
     margin-left: 12px;
     margin-right: 10px;

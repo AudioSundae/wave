@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Notifications from './components/Notifications';
 import Profile from './components/Profile';
-
+import MobileNav from './components/MobileNav';
 import withFirebase from './components/Firebase';
 import './sass/main.scss';
 require("typeface-nunito-sans")
@@ -30,8 +30,15 @@ class App extends React.Component {
             ? <Notifications {...this.props} />
           : page === "profile"
             ? <Profile {...this.props} />
+          : page === "add"
+            ? <Profile {...this.props} />
           : <div className="flex" />
         }
+        <MobileNav
+          {...this.props}
+          page={page}
+          onSwitchPage={this.switchPage}
+        />
       </div>
     )
   }

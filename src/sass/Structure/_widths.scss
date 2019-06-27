@@ -2,15 +2,36 @@
   width: 100%;
   max-width: 950px;
   min-width: 580px;
+  @include tabletandmobile {
+    max-width: 200vw;
+    width: 200vw;
+    min-width: 325px;
+  }
 }
 .home-w-l {
   max-width: 375px;
   min-width: 220px;
   width: 40vw;
+  @include tabletandmobile {
+    @include transition(all, 300ms);
+    width: 100vw !important;
+    max-width: 640px;
+    min-width: 325px;
+    padding-left: 0 !important;
+    margin-left: 100vw;
+    &.contact_active {
+      margin-left: -100vw;
+    }
+  }
 }
 .home-w-r {
-  @include transition(all, 400ms);
+  @include transition(all, 300ms);
   max-width: 575px;
+  @include tabletandmobile {
+    width: 100vw !important;
+    max-width: 640px;
+    padding-right: 0 !important;
+  }
   &.active {
     width: 60vw;
   }
@@ -20,4 +41,7 @@
 }
 .home-w-c {
   width: calc(100% - 32px);
+}
+.home-w-c-in {
+  width: calc(100% - 56px);
 }

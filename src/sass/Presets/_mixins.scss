@@ -7,14 +7,14 @@
 
 // NOT DESKTOP
 @mixin tabletandmobile {
-  @media (max-width: 850px) {
+  @media (max-width: 640px) {
     @content;
   }
 }
 
 // DESKTOP
 @mixin desktop {
-  @media (min-width: 850px) {
+  @media (min-width: 640px) {
      @content;
    }
 }

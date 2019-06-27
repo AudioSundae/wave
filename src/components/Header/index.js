@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import home_u from '../../img/icons/home_u.svg';
 import home_a from '../../img/icons/home_a.svg';
 import notifications_u from '../../img/icons/notifications_u.svg';
@@ -10,7 +9,7 @@ import add from '../../img/icons/add_u.svg';
 export default props =>
   <div className="header home-w-head row-fe-c">
     <div className="icon-size">
-      <img className="icon-size" src={add} />
+      <img className="icon-size" src={add} alt="add" />
     </div>
     <div className="divider" />
     {["home", "notifications", "account"].map((page, index) =>
@@ -25,6 +24,7 @@ export default props =>
             opacity: page === props.page ? 1 : 0
           }}
           className="max icon-size"
+          alt="active"
         />
         <img
           src={page === "home" ? home_u : page === "notifications" ? notifications_u : account_u}
@@ -32,6 +32,7 @@ export default props =>
             opacity: page === props.page ? 0 : 1
           }}
           className="max icon-size"
+          alt="inactive"
         />
       </div>
     )}

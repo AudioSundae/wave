@@ -2,6 +2,9 @@
   height: 76px;
   position: absolute;
   z-index: 1;
+  @include tabletandmobile {
+    display: none;
+  }
   > div.divider {
     @include border-radius(50px);
     background-color: $c-5;

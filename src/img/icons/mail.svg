@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.53846154,0 L19.4615385,0 C20.8634921,0 22,1.19390733 22,2.66666667 L22,13.3333333 C22,14.8060927 20.8634921,16 19.4615385,16 L2.53846154,16 C1.13650794,16 0,14.8060927 0,13.3333333 L0,2.66666667 C0,1.19390733 1.13650794,0 2.53846154,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Dexter-Version-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Episode-Copy-5" transform="translate(-940.000000, -164.000000)">
+            <g id="Group-3" transform="translate(112.000000, 20.000000)">
+                <g id="Group-14" transform="translate(487.000000, 139.000000)">
+                    <g id="Group-6" transform="translate(341.000000, 5.000000)">
+                        <g id="Path">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#000022" fill-rule="nonzero" opacity="0.1" xlink:href="#path-1"></use>
+                            <path d="M20.150876,16 L2.62837514,16 C1.17676363,16 0,14.6044605 0,12.8829753 L0,0.414876665 C0,0.0752739129 0.0952506829,-0.396351642 0.285752049,-1 C13.913226,10.3333333 20.534934,16 20.150876,16 Z" id="Mask" fill="#000022" fill-rule="nonzero" opacity="0.05" mask="url(#mask-2)"></path>
+                            <path d="M22.9001583,16 L4.58118007,16 C3.06358622,16 1.83333333,14.6044605 1.83333333,12.8829753 L1.83333333,0.414876665 C1.83333333,0.0752739129 1.93291359,-0.396351642 2.13207411,-1 C16.3789787,10.3333333 23.3016734,16 22.9001583,16 Z" id="Mask" fill="#000022" fill-rule="nonzero" opacity="0.05" mask="url(#mask-2)" transform="translate(12.375000, 7.500000) scale(-1, 1) translate(-12.375000, -7.500000) "></path>
+                            <path d="M0.00671146294,0 L21.9964073,0 C22.0337596,0.924290792 21.7798546,1.61750889 21.2346924,2.07965428 C19.3128898,3.70880638 16.4301861,6.15253451 12.586581,9.4108387 C11.6599217,10.1963871 10.343197,10.1963871 9.41653777,9.4108387 C5.5589266,6.14066122 2.66571822,3.68802812 0.736912636,2.05293938 C0.198753471,1.59673063 -0.0446469195,0.912417503 0.00671146294,0 Z" fill="#ACACB7" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

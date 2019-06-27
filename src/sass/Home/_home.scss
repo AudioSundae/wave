@@ -1,15 +1,15 @@
 .home-module {
-  width: 100%;
   flex: 1;
-  margin-bottom: 20px;
   position: relative;
   > div.left {
     z-index: 2;
     padding-left: 28px;
     height: 100%;
+    position: relative;
   }
   > div.right {
     padding-right: 28px;
     height: 100%;
+    position: relative;
   }
 }

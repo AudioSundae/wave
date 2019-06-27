@@ -8,6 +8,7 @@ export default props => {
           className={cn(["row-fs-c", {
             "active": index === props.activeContact
           }])}
+          key={index}
           onClick={() => props.onClick(index)}
         >
           <div className="img" />

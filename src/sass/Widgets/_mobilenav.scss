@@ -1,0 +1,36 @@
+.mobilenav {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 88px;
+  z-index: 200;
+  background-color: white;
+  box-shadow: 0px -4px 20px 0 $c-10;
+  @include desktop {
+    display: none;
+  }
+  > div {
+    @include transition(all, 200ms);
+    @include user-select(none);
+    position: relative;
+    z-index: 101;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 20px;
+    > img {
+      position: absolute;
+      z-index: 102;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      opacity: .75;
+    }
+  }
+}
+.icon-size-m {
+  height: 24px;
+  width: 24px;
+}
