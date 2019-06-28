@@ -17,17 +17,18 @@ function updateAuthStatus() {
 			resolve(false)
 		}
     login().then(() => {
-      var googleUser = gapi.auth2.getAuthInstance().currentUser.get()
-      var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get()
+      let googleUser = gapi.auth2.getAuthInstance().currentUser.get(),
+          isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get(),
+          googleToken = googleUser.getAuthResponse().id_token;
       if (isSignedIn) {
-        var credential = firebase.auth.GoogleAuthProvider.credential(googleUser.getAuthResponse().id_token);
-        firebase.auth().signInWithCredential(credential).then((user) => {
+        var credential = firebase.auth.GoogleAuthProvider.credential(googleToken);
+        firebase.auth().signInWithCredential(credential).then(user => {
           var hasUser = Boolean(user !== null)
           if (hasUser) {
             // fix this!
             this.setState({
-              user: "user!",
-              authenticated: hasUser
+              authenticated: hasUser,
+              token: googleToken
             })
             resolve()
           } else {

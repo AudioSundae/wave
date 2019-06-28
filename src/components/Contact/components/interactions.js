@@ -21,7 +21,7 @@ export default props =>
             </div>
             <a
               className="right row-fe-c"
-              href="#"
+              href="google.com"
             >
               <span>Follow up</span>
             </a>
