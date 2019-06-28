@@ -21,7 +21,7 @@ class App extends React.Component {
     let { page } = this.state
         // { user } = this.props;
     return(
-      <div className="app col-fs-c">
+      <div className="app row-fs-c">
         <Header page={page} onSwitchPage={this.switchPage} />
         {
           page === "home"

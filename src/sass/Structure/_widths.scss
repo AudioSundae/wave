@@ -1,24 +1,16 @@
 .home-w-head {
-  width: 100%;
-  max-width: 970px;
-  min-width: 580px;
-  @include tabletandmobile {
-    max-width: 200vw;
-    width: 200vw;
-    min-width: 325px;
-  }
+  width: 76px;
 }
 .home-w-l {
   max-width: 375px;
   min-width: 220px;
-  width: 40vw;
   @include tabletandmobile {
     @include transition(all, 300ms);
     width: 100vw !important;
-    max-width: 640px;
+    max-width: 840px !important;
     min-width: 325px;
     padding-left: 0 !important;
-    margin-left: 100vw;
+    margin-left: 0vw;
     &.contact_active {
       margin-left: -100vw;
     }
@@ -26,14 +18,14 @@
 }
 .home-w-r {
   @include transition(all, 300ms);
-  max-width: 595px;
+  max-width: 680px;
   @include tabletandmobile {
     width: 100vw !important;
-    max-width: 640px;
+    max-width: 840px !important;
     padding-right: 0 !important;
   }
   &.active {
-    width: 60vw;
+    width: 60%;
   }
   &:not(.active) {
     width: 0;

@@ -7,11 +7,7 @@ import account_u from '../../img/icons/account_u.svg';
 import account_a from '../../img/icons/account_a.svg';
 import add from '../../img/icons/add_u.svg';
 export default props =>
-  <div className="header home-w-head row-fe-c">
-    <div className="icon-size">
-      <img className="icon-size" src={add} alt="add" />
-    </div>
-    <div className="divider" />
+  <div className="header home-w-head col-fs-c">
     {["home", "notifications", "account"].map((page, index) =>
       <div
         className="icon-size col-c-c"
@@ -36,4 +32,8 @@ export default props =>
         />
       </div>
     )}
+    <div className="divider" />
+    <div className="icon-size">
+      <img className="icon-size" src={add} alt="add" />
+    </div>
   </div>

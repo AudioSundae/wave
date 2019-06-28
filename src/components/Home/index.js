@@ -7,6 +7,17 @@ const cn = require('classnames')
 const data = [{"firstName": "matthew", "lastName": "kochakian"},
   {"firstName": "alvin", "lastName": "yakitori"},
   {"firstName": "jefferson", "lastName": "steelflex"},
+  {"firstName": "person", "lastName": "ofinterest"},
+  {"firstName": "wayne", "lastName": "tables"},
+  {"firstName": "human", "lastName": "fellow"},
+  {"firstName": "Sandro", "lastName": "Denver"},
+  {"firstName": "alice", "lastName": "salad"},
+  {"firstName": "gerry", "lastName": "mandering"},
+  {"firstName": "chuckles", "lastName": "felix"},
+  {"firstName": "fiscal", "lastName": "tostada"},
+  {"firstName": "Harbinger", "lastName": "Ascot"},
+  {"firstName": "Coolidge", "lastName": "Lasts"},
+  {"firstName": "Kiwi", "lastName": "Figurine"},
 ]
 export default class extends React.Component {
   constructor(props) {
@@ -23,8 +34,8 @@ export default class extends React.Component {
           // activeList
         } = this.state;
     return(
-      <div className="home-module flex row-c-c">
-        <div className={cn(["left", "home-w-l", "col", {"contact_active": activeContact !== "none"}])}>
+      <div className="home-module s-home flex row-c">
+        <div className={cn(["left", "home-w-l", "col", "flex", {"contact_active": activeContact !== "none"}])}>
           <Search />
           <Filters />
           <Contacts contacts={data} onClick={this.setActiveContact} activeContact={activeContact} />
