@@ -3,6 +3,9 @@ import Contact from '../Contact';
 import Contacts from './components/contacts';
 import Filters from './components/filters';
 import Search from './components/search';
+import Header from '../Header';
+
+import background from '../../img/background.svg';
 const cn = require('classnames')
 const data = [{"firstName": "matthew", "lastName": "kochakian"},
   {"firstName": "alvin", "lastName": "yakitori"},
@@ -35,7 +38,8 @@ export default class extends React.Component {
         } = this.state;
     return(
       <div className="home-module s-home flex row-c">
-        <div className={cn(["left", "home-w-l", "col", "flex", {"contact_active": activeContact !== "none"}])}>
+        <div className={cn(["left", "home-w-l", "col", {"contact_active": activeContact !== "none"}])}>
+          <Header onSwitchPage={this.props.onSwitchPage} page={this.props.page} />
           <Search />
           <Filters />
           <Contacts contacts={data} onClick={this.setActiveContact} activeContact={activeContact} />
@@ -43,15 +47,12 @@ export default class extends React.Component {
         <div className={cn([
           "right",
           "home-w-r",
+          "flex",
           {
             "active": activeContact !== "none"
           }
         ])}>
-        {
-          activeContact !== "none"
-            ? <Contact contact={data[activeContact]} onClose={this.setActiveContact} />
-            : <div />
-        }
+          <Contact contact={data[activeContact]} onClose={this.setActiveContact} />
         </div>
       </div>
     )

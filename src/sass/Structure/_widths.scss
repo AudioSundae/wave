@@ -1,14 +1,10 @@
 .home-w-head {
-  width: 76px;
+  width: 100%;
 }
 .home-w-l {
-  max-width: 375px;
-  min-width: 220px;
+  width: 296px;
   @include tabletandmobile {
     @include transition(all, 300ms);
-    width: 100vw !important;
-    max-width: 840px !important;
-    min-width: 325px;
     padding-left: 0 !important;
     margin-left: 0vw;
     &.contact_active {
@@ -18,7 +14,6 @@
 }
 .home-w-r {
   @include transition(all, 300ms);
-  max-width: 680px;
   @include tabletandmobile {
     width: 100vw !important;
     max-width: 840px !important;
@@ -30,10 +25,4 @@
   &:not(.active) {
     width: 0;
   }
-}
-.home-w-c {
-  width: calc(100% - 32px);
-}
-.home-w-c-in {
-  width: calc(100% - 56px);
 }

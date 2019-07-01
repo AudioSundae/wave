@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
 import Home from './components/Home';
 import Notifications from './components/Notifications';
 import Profile from './components/Profile';
@@ -21,11 +20,13 @@ class App extends React.Component {
     let { page } = this.state
         // { user } = this.props;
     return(
-      <div className="app row-fs-c">
-        <Header page={page} onSwitchPage={this.switchPage} />
+      <div className="app row-sb-c">
+        {/*
+          <Header page={page} onSwitchPage={this.switchPage} />
+        */}
         {
           page === "home"
-            ? <Home {...this.props} />
+            ? <Home {...this.props} page={page} onSwitchPage={this.switchPage} />
           : page === "notifications"
             ? <Notifications {...this.props} />
           : page === "profile"

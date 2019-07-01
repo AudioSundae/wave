@@ -1,5 +1,4 @@
 .header {
-  height: 100vh;
   @include tabletandmobile {
     display: none;
   }
@@ -13,7 +12,9 @@
     @include transition(all, 200ms);
     position: relative;
     z-index: 101;
-    margin-top: 28px;
+    margin-top: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
     > img {
       position: absolute;
       z-index: 102;

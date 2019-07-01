@@ -1,20 +1,17 @@
 .home-contacts {
-  @include border-radius(12px 12px 0 0);
   flex: 1;
   width: 100%;
-  background-color: white;
-  box-shadow: 0 2px 20px 2px $c-10;
   overflow: hidden;
   > div {
     overflow-y: auto;
     overflow-x: hidden;
     > div {
+      @include user-select(none);
       @include transition(all, 200ms);
       height: 56px;
-      width: calc(100% - 16px);
-      padding-left: 16px;
+      width: calc(100% - 28px);
+      padding-left: 28px;
       text-transform: capitalize;
-      box-shadow: 16px 1px 0 0 $c-3;
       > div.img {
         @include border-radius(50px);
         height: 28px;
@@ -23,12 +20,8 @@
         margin-right: 12px;
       }
       &.active {
-        background-color: $c-lblue;
+        background-color: $c-10;
         box-shadow: none;
-        color: white;
-        > div.img {
-          background: rgba(255,255,255,.5);
-        }
       }
       &:not(.active) {
         &:hover {

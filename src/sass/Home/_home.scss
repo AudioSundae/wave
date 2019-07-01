@@ -2,12 +2,13 @@
   position: relative;
   > div.left {
     z-index: 2;
-    padding-left: 28px;
     height: 100%;
     position: relative;
+    box-shadow: 1px 0 0 0 $c-5;
+    // background-image: linear-gradient(135deg, #F9F8FD 0%, #F9F7FD 30%, #F7F6FD 60%, #F7F8FC 100%);
+    background: rgba(255,255,255,0.10);
   }
   > div.right {
-    padding-right: 28px;
     height: 100%;
     position: relative;
   }
