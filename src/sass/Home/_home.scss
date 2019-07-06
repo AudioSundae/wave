@@ -7,6 +7,15 @@
     box-shadow: 1px 0 0 0 $c-5;
     // background-image: linear-gradient(135deg, #F9F8FD 0%, #F9F7FD 30%, #F7F6FD 60%, #F7F8FC 100%);
     background: rgba(255,255,255,0.10);
+
+    > div.fade {
+      height: 48px;
+      top: 64px;
+      width: 20px;
+      position: absolute;
+      right: 18px;
+      background: linear-gradient(to right, rgba(249,251,254,0), rgba(249,251,254,1))
+    }
   }
   > div.right {
     height: 100%;

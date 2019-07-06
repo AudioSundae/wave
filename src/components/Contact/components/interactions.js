@@ -7,12 +7,9 @@ export default props =>
     <h3>interactions</h3>
     {props.interactions.map((interaction, index) =>
       <div className="interaction row-sb" key={index}>
-        <div className="date row-fs-c">
-          <div />
-          <div className="col-c">
-            <span className="one">{interaction.date || ""}</span>
-            <span className="two">{interaction.time || ""}</span>
-          </div>
+        <div className="date col-c">
+          <span className="one">{interaction.date || ""}</span>
+          <span className="two">{interaction.time || ""}</span>
         </div>
         <div className="col flex">
           <div className="content row-sb-c">
@@ -24,7 +21,7 @@ export default props =>
               className="right row-fe-c"
               href={interaction.followUpLink || "#"}
             >
-              <span>Follow up</span>
+              <span>Follow up ➔</span>
             </a>
           </div>
           <Textarea style={{resize: 'none'}} defaultValue={interaction.note || ""} placeholder="Add a note..." />

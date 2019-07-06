@@ -39,9 +39,12 @@ export default class extends React.Component {
     return(
       <div className="home-module s-home flex row-c">
         <div className={cn(["left", "home-w-l", "col", {"contact_active": activeContact !== "none"}])}>
-          <Header onSwitchPage={this.props.onSwitchPage} page={this.props.page} />
+          {/*
+            <Header onSwitchPage={this.props.onSwitchPage} page={this.props.page} />
+          */}
           <Search />
           <Filters />
+          <div className="fade" />
           <Contacts contacts={data} onClick={this.setActiveContact} activeContact={activeContact} />
         </div>
         <div className={cn([

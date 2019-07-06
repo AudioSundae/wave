@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="94.2906574%" x2="0%" y2="5.70934256%" id="linearGradient-1">
+            <stop stop-color="#04BEFE" stop-opacity="0.997104458" offset="0%"></stop>
+            <stop stop-color="#4481EB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Dexter-Version-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Episode-Copy-13" transform="translate(-869.000000, -80.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-7" transform="translate(343.000000, 64.000000)">
+                <g id="Group-3">
+                    <g id="Group-14" transform="translate(83.000000, 1.000000)">
+                        <g id="Group-6" transform="translate(443.000000, 15.000000)">
+                            <path d="M15.8808807,5.13042965 L11.4692115,4.62325158 L9.64151996,0.692621518 C9.22052067,-0.226004766 7.78641306,-0.246291889 7.37266151,0.724320147 L5.54496998,4.65495021 L1.13330076,5.16212828 C0.0458243012,5.29906636 -0.406056674,6.67161702 0.440038458,7.38103235 L3.68576652,10.2973063 L2.80343268,14.4815254 C2.60900412,15.460696 3.57862599,16.3736166 4.63112421,15.8445664 L8.50709074,13.6890596 L12.3830573,15.8128678 C13.415703,16.3314574 14.4672558,15.4169519 14.2107488,14.4495097 L13.328415,10.2656076 L16.574143,7.34933372 C17.3817936,6.60473291 16.9797015,5.26831869 15.8808807,5.13042965 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

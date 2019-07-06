@@ -4,10 +4,10 @@
   height: 100%;
 
   > div {
-    padding-top: 64px;
-    padding-left: 64px;
-    width: calc(100% - 128px);
-    padding-right: 64px;
+    padding-top: 48px;
+    padding-left: 5%;
+    width: 90%;
+    padding-right: 5%;
     overflow-y: auto;
     overflow-x: hidden;
     text-overflow: ellipsis;
@@ -23,9 +23,9 @@
     > div.top-info {
       > div.img {
         @include border-radius(50px);
-        height: 48px;
-        width: 48px;
-        margin-right: 16px;
+        height: 64px;
+        width: 64px;
+        margin-right: 24px;
         background: $c-5;
       }
       > div {
@@ -57,7 +57,18 @@
         > div.social {
           > div {
             @include transition(all, 200ms);
-            margin-left: 16px;
+            margin-left: 20px;
+            position: relative;
+            &.star {
+              width: 20px;
+              height: 20px;
+              > img {
+                position: absolute;
+                &:not(.active) {
+                  opacity: 0;
+                }
+              }
+            }
             &:hover {
               cursor: pointer;
             }
@@ -70,45 +81,44 @@
     }
     > input.bio {
       width: calc(100% - 100px);
-      margin-left: 66px;
+      margin-left: 88px;
       margin-top: 16px;
       color: $c-50;
     }
     > div.keywords {
       margin-top: 36px;
+      width: 100%;
       color: $c-25;
     }
     > div.interactions {
-      margin-top: 36px;
+      margin-top: 28px;
       padding-top: 16px;
       padding-bottom: 36px;
     }
   }
 }
 .interaction {
+  @include transition(all, 200ms);
+  // @include border-radius(8px);
   margin-top: 24px;
-  > div.line {
-
+  // border: 1px solid $c-5;
+  &:hover {
+    box-shadow: -2px 0 0 0 $c-25;
   }
+  box-shadow: -2px 0 0 0 $c-10;
+  width: 100%;
+  margin-left: -16px;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
   > div.date {
-    > div.line {
-      
-    }
-    > div:not(.col-c) {
-      @include border-radius(50px);
-      height: 4px;
-      width: 4px;
-      background-color: $c-10;
-    }
-    > div.col-c {
-      margin-left: 16px;
-      margin-top: 10px;
-      color: $c-50;
-      font-size: 12px;
-      width: 76px;
-      > span.two {
-        color: $c-25;
-      }
+    margin-top: 8px;
+    color: $c-50;
+    font-size: 12px;
+    width: 88px;
+    > span.two {
+      color: $c-25;
     }
   }
   > div:not(.date) {

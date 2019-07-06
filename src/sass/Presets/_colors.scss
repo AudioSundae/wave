@@ -10,10 +10,12 @@ $c-3: rgba(0,0,34,.03);
 
 // GRADIENT
 $c-grad: linear-gradient(#4481EB, #04BEFE);
-$c-blue: #4481EB;
+$c-blue: rgba(68,129,235,1);
+$c-blue-50: rgba(68,129,235,.5);
+$c-blue-10: rgba(68,129,235,.1);
 $c-lblue: #04BEFE;
 $c-lblue-10: rgba(4,190,254,.10);
-
+$c-lblue-5: rgba(4,190,254,.05);
 // OTHER
 $c-background: #F9FBFE;
 // $c-background: #F5F8FE;
