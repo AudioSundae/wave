@@ -16,11 +16,12 @@
         @include border-radius(50px);
         height: 28px;
         width: 28px;
-        background: $c-5;
+        background: $c-blue-5;
         margin-right: 12px;
       }
       &.active {
-        background-color: $c-10;
+        background-color: $c-blue;
+        color: white;
         box-shadow: none;
       }
       &:not(.active) {

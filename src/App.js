@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
+import Landing from './components/Landing';
 import Notifications from './components/Notifications';
 import Profile from './components/Profile';
 import MobileNav from './components/MobileNav';
@@ -19,29 +20,30 @@ class App extends React.Component {
   render() {
     let { page } = this.state
         // { user } = this.props;
-    return(
-      <div className="app row-sb-c">
-        {/*
-          <Header page={page} onSwitchPage={this.switchPage} />
-        */}
-        {
-          page === "home"
-            ? <Home {...this.props} page={page} onSwitchPage={this.switchPage} />
-          : page === "notifications"
-            ? <Notifications {...this.props} />
-          : page === "profile"
-            ? <Profile {...this.props} />
-          : page === "add"
-            ? <Profile {...this.props} />
-          : <div className="flex" />
-        }
-        <MobileNav
-          {...this.props}
-          page={page}
-          onSwitchPage={this.switchPage}
-        />
-      </div>
-    )
+    return <Landing />
+    // return(
+    //   <div className="app row-sb-c">
+    //     {/*
+    //       <Header page={page} onSwitchPage={this.switchPage} />
+    //     */}
+    //     {
+    //       page === "home"
+    //         ? <Home {...this.props} page={page} onSwitchPage={this.switchPage} />
+    //       : page === "notifications"
+    //         ? <Notifications {...this.props} />
+    //       : page === "profile"
+    //         ? <Profile {...this.props} />
+    //       : page === "add"
+    //         ? <Profile {...this.props} />
+    //       : <div className="flex" />
+    //     }
+    //     <MobileNav
+    //       {...this.props}
+    //       page={page}
+    //       onSwitchPage={this.switchPage}
+    //     />
+    //   </div>
+    // )
   }
 }
 

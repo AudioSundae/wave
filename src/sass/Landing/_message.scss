@@ -1,0 +1,55 @@
+.landing-message {
+  width: calc(100% - 32px);
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 10px;
+  &.hideImg {
+    > div.img {
+      display: none;
+    }
+  }
+  &:not(.reverse) {
+    &.hideImg > div.msg {
+      margin-left: 46px;
+    }
+    > div.img {
+      margin-right: 10px;
+    }
+    > div.msg {
+      margin-right: calc(16px + 36px + 10px);
+    }
+  }
+  &.reverse {
+    &.hideImg > div.msg {
+      margin-right: 46px;
+    }
+    @include flex-direction(row-reverse);
+    > div.img {
+      background: $c-5;
+      margin-left: 10px;
+    }
+    > div.msg {
+      background-color: $c-blue;
+      color: white;
+    }
+  }
+  > div.msg {
+    @include border-radius(18px);
+    @include user-select(none);
+    > div {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    max-width: calc(100% - 124px);
+    box-shadow: 0 2px 10px $c-5;
+    background-color: white;
+  }
+  > div.img {
+    @include border-radius(50px);
+    background: linear-gradient(to right, $c-lblue, $c-blue);
+    height: 36px;
+    width: 36px;
+  }
+}

@@ -5,9 +5,9 @@
 
   > div {
     padding-top: 48px;
-    padding-left: 5%;
-    width: 90%;
-    padding-right: 5%;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: calc(100% - 64px);
     overflow-y: auto;
     overflow-x: hidden;
     text-overflow: ellipsis;
@@ -26,7 +26,9 @@
         height: 64px;
         width: 64px;
         margin-right: 24px;
-        background: $c-5;
+        background: $c-background;
+        border: 1px solid $c-blue-10;
+        box-sizing: border-box;
       }
       > div {
         @include tabletandmobile {
@@ -46,10 +48,10 @@
               font-size: 28px;
             }
             &.loc {
-              margin-top: -6px;
+              margin-top: -4px;
               margin-left: 2px;
               color: $c-50;
-              font-size: 12px;
+              font-size: 14px;
               font-weight: 600;
             }
           }
@@ -89,6 +91,9 @@
       margin-top: 36px;
       width: 100%;
       color: $c-25;
+      > span {
+        margin-left: 88px;
+      }
     }
     > div.interactions {
       margin-top: 28px;
@@ -99,19 +104,9 @@
 }
 .interaction {
   @include transition(all, 200ms);
-  // @include border-radius(8px);
   margin-top: 24px;
-  // border: 1px solid $c-5;
-  &:hover {
-    box-shadow: -2px 0 0 0 $c-25;
-  }
-  box-shadow: -2px 0 0 0 $c-10;
-  width: 100%;
-  margin-left: -16px;
-  padding-left: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-right: 16px;
   > div.date {
     margin-top: 8px;
     color: $c-50;
@@ -129,13 +124,15 @@
       padding-right: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
-      background-color: $c-3;
+      background-color: $c-background;
       margin-top: 6px;
       margin-bottom: 12px;
       font-size: 14px;
-      color: $c-50;
+      color: $c-75;
+      border: 1px solid $c-blue-10;
       &::placeholder {
         font-size: 14px;
+        color: $c-25;
       }
     }
     > div.content {
@@ -153,8 +150,15 @@
         }
       }
       > a.right {
+        @include border-radius(50px);
+        @include user-select(none);
         @include transition(all, 200ms);
-        color: $c-blue;
+        height: 28px;
+        padding-left: 12px;
+        padding-right: 8px;
+        background-color: $c-blue;
+        // box-shadow: 0 2px 4px 0 $c-10;
+        color: white;
         text-decoration: none;
         font-size: 14px;
         font-weight: 600;
