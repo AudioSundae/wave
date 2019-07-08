@@ -13,37 +13,42 @@ class App extends React.Component {
     super(props)
     this.state = {
       page: "home",
-      data: null
+      data: null,
+      app: "landing"
     }
   }
   switchPage = page => this.setState({page})
   render() {
-    let { page } = this.state
+    let { page, app } = this.state
         // { user } = this.props;
-    return <Landing />
-    // return(
-    //   <div className="app row-sb-c">
-    //     {/*
-    //       <Header page={page} onSwitchPage={this.switchPage} />
-    //     */}
-    //     {
-    //       page === "home"
-    //         ? <Home {...this.props} page={page} onSwitchPage={this.switchPage} />
-    //       : page === "notifications"
-    //         ? <Notifications {...this.props} />
-    //       : page === "profile"
-    //         ? <Profile {...this.props} />
-    //       : page === "add"
-    //         ? <Profile {...this.props} />
-    //       : <div className="flex" />
-    //     }
-    //     <MobileNav
-    //       {...this.props}
-    //       page={page}
-    //       onSwitchPage={this.switchPage}
-    //     />
-    //   </div>
-    // )
+
+    if (app === "landing") {
+      return <Landing />
+    } else {
+      return(
+        <div className="app row-sb-c">
+          {/*
+            <Header page={page} onSwitchPage={this.switchPage} />
+          */}
+          {
+            page === "home"
+              ? <Home {...this.props} page={page} onSwitchPage={this.switchPage} />
+            : page === "notifications"
+              ? <Notifications {...this.props} />
+            : page === "profile"
+              ? <Profile {...this.props} />
+            : page === "add"
+              ? <Profile {...this.props} />
+            : <div className="flex" />
+          }
+          <MobileNav
+            {...this.props}
+            page={page}
+            onSwitchPage={this.switchPage}
+          />
+        </div>
+      )
+    }
   }
 }
 

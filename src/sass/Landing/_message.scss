@@ -3,6 +3,11 @@
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 10px;
+  -webkit-animation: messageEnter .2s; /* Safari 4+ */
+  -moz-animation:    messageEnter .2s; /* Fx 5+ */
+  -o-animation:      messageEnter .2s; /* Opera 12+ */
+  animation:         messageEnter .2s; /* IE 10+, Fx 29+ */
+
   &.hideImg {
     > div.img {
       display: none;
@@ -51,5 +56,45 @@
     background: linear-gradient(to right, $c-lblue, $c-blue);
     height: 36px;
     width: 36px;
+  }
+}
+@-webkit-keyframes messageEnter {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@-moz-keyframes messageEnter {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@-o-keyframes messageEnter {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes messageEnter {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
   }
 }

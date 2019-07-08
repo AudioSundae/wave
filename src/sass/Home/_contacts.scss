@@ -1,33 +1,30 @@
 .home-contacts {
   flex: 1;
   width: 100%;
-  overflow: hidden;
+  height: calc(100vh - 118px);
+  overflow: auto;
   > div {
-    overflow-y: auto;
-    overflow-x: hidden;
-    > div {
-      @include user-select(none);
-      @include transition(all, 200ms);
-      height: 56px;
-      width: calc(100% - 28px);
-      padding-left: 28px;
-      text-transform: capitalize;
-      > div.img {
-        @include border-radius(50px);
-        height: 28px;
-        width: 28px;
-        background: $c-blue-5;
-        margin-right: 12px;
-      }
-      &.active {
-        background-color: $c-blue;
-        color: white;
-        box-shadow: none;
-      }
-      &:not(.active) {
-        &:hover {
-          cursor: pointer;
-        }
+    @include user-select(none);
+    @include transition(all, 200ms);
+    height: 56px;
+    width: calc(100% - 28px);
+    padding-left: 28px;
+    text-transform: capitalize;
+    > div.img {
+      @include border-radius(50px);
+      height: 28px;
+      width: 28px;
+      background: $c-blue-5;
+      margin-right: 12px;
+    }
+    &.active {
+      background-color: $c-blue;
+      color: white;
+      box-shadow: none;
+    }
+    &:not(.active) {
+      &:hover {
+        cursor: pointer;
       }
     }
   }

@@ -1,12 +1,11 @@
 .home-module {
   position: relative;
   > div.left {
-    z-index: 2;
-    height: 100%;
     position: relative;
-    box-shadow: 1px 0 0 0 $c-blue-10;
-    // background-image: linear-gradient(135deg, #F9F8FD 0%, #F9F7FD 30%, #F7F6FD 60%, #F7F8FC 100%);
-    background: $c-background;
+    width: 296px;
+    box-shadow: inset -1px 0 0 0 $c-5;
+    z-index: 2;
+    background: rgba(251,254,255,.95);
 
     > div.fade {
       height: 48px;
@@ -14,11 +13,22 @@
       width: 20px;
       position: absolute;
       right: 18px;
-      background: linear-gradient(to right, rgba(249,251,254,0), $c-background)
+      background: linear-gradient(to right, rgba(249,251,254,0), rgba(251,254,255,.95))
     }
   }
   > div.right {
     height: 100%;
+    z-index: 5;
     position: relative;
+  }
+  > img {
+    z-index: 1;
+    height: 100%;
+    width: 110%;
+    position: absolute;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    filter: saturate(2);
+    filter: hue-rotate(15deg);
   }
 }

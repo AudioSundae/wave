@@ -3,9 +3,8 @@ import Contact from '../Contact';
 import Contacts from './components/contacts';
 import Filters from './components/filters';
 import Search from './components/search';
-import Header from '../Header';
 
-import background from '../../img/background.svg';
+import background from '../../img/mountain.jpg';
 const cn = require('classnames')
 const data = [{"firstName": "matthew", "lastName": "kochakian"},
   {"firstName": "alvin", "lastName": "yakitori"},
@@ -39,9 +38,6 @@ export default class extends React.Component {
     return(
       <div className="home-module s-home flex row-c">
         <div className={cn(["left", "home-w-l", "col", {"contact_active": activeContact !== "none"}])}>
-          {/*
-            <Header onSwitchPage={this.props.onSwitchPage} page={this.props.page} />
-          */}
           <Search />
           <Filters />
           <div className="fade" />
@@ -57,6 +53,7 @@ export default class extends React.Component {
         ])}>
           <Contact contact={data[activeContact]} onClose={this.setActiveContact} />
         </div>
+        <img src={background} alt="mountain" />
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Message from './components/message';
 import Prompt from './components/prompt';
+import Typing from './components/typing';
 import mountain from '../../img/mountain.jpg';
 import logo from '../../img/icons/logo.svg';
 import { sendFirstMessage, sendSecondMessage } from '../../functions/Landing';
@@ -28,15 +29,11 @@ export default class extends React.Component {
       this.setState({messages})
     } else {
       this.sendFirstMessage()
-      .then(messages => setTimeout(messages => this.sendSecondMessage(messages), 1000))
+      .then(setTimeout(() => this.setState({typing: true}), 500))
+      .then(messages => setTimeout(messages => this.sendSecondMessage(messages), 1500))
+      .then(() => console.log(this.state.currentSubmission))
     }
   }
-
-
-
-
-
-
   componentDidUpdate(prevProps, prevState, snapshot) {
     let { currentSubmission, messages } = this.state;
     if (prevState.currentSubmission !== currentSubmission) {
@@ -55,12 +52,12 @@ export default class extends React.Component {
     this.setState({currentSubmission: promptAnswer.join(" "), prompting: false})
   }
   render() {
-    let listUser = JSON.parse(localStorage.getItem('list_user')),
-        { messages, prompting } = this.state;
+    let { messages, prompting } = this.state;
     return(
       <div className="landing row">
         <img className="logo" src={logo} alt="Dexter" />
         <img className="background" src={mountain} alt="mountains" />
+        <img className="background two" src={mountain} alt="mountains" />
         <div className="flex">
           {
             messages.map((m, index) =>
@@ -78,6 +75,11 @@ export default class extends React.Component {
               />
             )
           }
+          <Typing
+            className={cn({
+              "show": this.state.typing
+            })}
+          />
           <Prompt
             className={cn({"active": !!prompting})}
             type={prompting.type || ""}

@@ -1,0 +1,60 @@
+.landing-typing {
+  @include transition(all, 200ms);
+  @include user-select(none);
+  margin-left: 16px;
+  overflow: hidden;
+  // height: 0;
+  opacity: 0;
+  &.show {
+    opacity: 1;
+    // height: 36px;
+  }
+  > div.img {
+    @include border-radius(50px);
+    height: 36px;
+    width: 36px;
+    background: linear-gradient(to right, $c-lblue, $c-blue);
+  }
+  > div.loading {
+    @include border-radius(50px);
+    margin-left: 10px;
+    height: 36px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: $c-blue-10;
+    > div {
+      @include border-radius(50px);
+      background-color: $c-blue-25;
+      height: 6px;
+      width: 6px;
+      margin-left: 4px;
+      margin-right: 4px;
+      -webkit-animation: opacity .45s alternate infinite; /* Safari 4+ */
+      -moz-animation:    opacity .45s alternate infinite; /* Fx 5+ */
+      -o-animation:      opacity .45s alternate infinite; /* Opera 12+ */
+      animation:         opacity .45s alternate infinite; /* IE 10+, Fx 29+ */
+      &:nth-child(2) {
+        animation-delay: .15s; /* or: Xms */
+      }
+      &:nth-child(3) {
+        animation-delay: .3s; /* or: Xms */
+      }
+    }
+  }
+}
+@-webkit-keyframes opacity {
+  from { opacity: .25 }
+  to { opacity: 1 }
+}
+@-moz-keyframes opacity {
+  from { opacity: .25 }
+  to { opacity: 1 }
+}
+@-o-keyframes opacity {
+  from { opacity: .25 }
+  to { opacity: 1 }
+}
+@keyframes opacity {
+  from { opacity: .25 }
+  to { opacity: 1 }
+}

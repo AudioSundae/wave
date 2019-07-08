@@ -4,10 +4,10 @@
   width: 100vw;
   > img.logo {
     z-index: 2;
-    width: 188px;
+    height: 36px;
     position: absolute;
     top: 16px;
-    left: 16px;
+    left: 24px;
   }
   > img.background {
     z-index: 1;
@@ -15,9 +15,18 @@
     min-height: 100%;
     width: 50%;
     left: 0;
+    &.two {
+      right: 0;
+      left: 50%;
+      filter: blur(6px);
+      -webkit-filter: blur(6px);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
   }
   > div {
-    background-color: $c-background;
+    z-index: 3;
+    background-color: rgba(251,254,255,.90);
     min-height: 100%;
     padding-top: 20px;
     margin-left: 50%;

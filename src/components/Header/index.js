@@ -5,7 +5,6 @@ import notifications_u from '../../img/icons/notifications_u.svg';
 import notifications_a from '../../img/icons/notifications_a.svg';
 import account_u from '../../img/icons/account_u.svg';
 import account_a from '../../img/icons/account_a.svg';
-import add from '../../img/icons/add_u.svg';
 export default props =>
   <div className="header home-w-head row-c-c">
     {["home", "notifications", "account"].map((page, index) =>
