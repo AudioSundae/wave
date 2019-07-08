@@ -3,6 +3,10 @@
   height: 100vh;
   width: 100vw;
   > img.logo {
+    @include tabletandmobile {
+      height: 24px;
+      margin: 0 auto;
+    }
     z-index: 2;
     height: 36px;
     position: absolute;
@@ -10,6 +14,17 @@
     left: 24px;
   }
   > img.background {
+    @include tabletandmobile {
+      z-index: 1;
+      position: absolute;
+      min-height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      &.two {
+        display: none;
+      }
+    }
     z-index: 1;
     position: absolute;
     min-height: 100%;
@@ -25,12 +40,24 @@
     }
   }
   > div {
+    @include tabletandmobile {
+      @include border-radius(18px 18px 0 0);
+      height: 90vh;
+      min-height: 90vh;
+      margin-left: 0;
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      box-shadow: 0 2px 50px $c-25;
+    }
     z-index: 3;
     background-color: rgba(251,254,255,.90);
     min-height: 100%;
     padding-top: 20px;
     margin-left: 50%;
     width: 50%;
+    height: 100%;
+    overflow: auto;
     position: relative;
   }
 }

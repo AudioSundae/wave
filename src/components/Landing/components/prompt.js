@@ -13,7 +13,15 @@ export default class extends React.Component {
   onSubmit = event => {
     let { inputOne, inputTwo } = this.state;
     event.preventDefault()
-    this.props.submitPromptFields([inputOne, inputTwo || null])
+    let value = this.props.type === "two_line"
+      ? [inputOne, inputTwo]
+      : this.props.type === "one_line"
+        ? [inputOne]
+        : []
+    this.props.submitPromptFields({
+      "value": value,
+      "promptId": this.props.promptId
+    })
     document.getElementById('prompt_form').reset()
     this.setState({inputOne: "", inputTwo: ""})
   }

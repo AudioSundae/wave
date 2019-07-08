@@ -1,4 +1,7 @@
 .landing-prompt {
+  @include tabletandmobile {
+    width: calc(100% - 32px);
+  }
   @include transition(all, 500ms);
   margin-left: 16px;
   margin-right: 16px;

@@ -8,6 +8,7 @@ export function sendSecondMessage() {
     typing: false
   }, this.setState({ messages, prompting: {
     "type": "two_line",
-    "prompt": ["Your first name", "Your last name"]
+    "prompt": ["Your first name", "Your last name"],
+    "promptId": "14SFG304Q9"
   }}))
 }

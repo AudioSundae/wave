@@ -1,3 +1,13 @@
 import { sendFirstMessage } from './sendFirstMessage';
 import { sendSecondMessage } from './sendSecondMessage';
-export { sendFirstMessage, sendSecondMessage }
+import { niceToMeetYou } from './niceToMeetYou';
+import { askForEmail } from './askForEmail';
+import { betaSignUpFinished } from './betaSignUpFinished';
+
+export {
+  sendFirstMessage,
+  sendSecondMessage,
+  askForEmail,
+  niceToMeetYou,
+  betaSignUpFinished
+}

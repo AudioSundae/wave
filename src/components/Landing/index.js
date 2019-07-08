@@ -4,8 +4,13 @@ import Prompt from './components/prompt';
 import Typing from './components/typing';
 import mountain from '../../img/mountain.jpg';
 import logo from '../../img/icons/logo.svg';
-import { sendFirstMessage, sendSecondMessage } from '../../functions/Landing';
+import { sendFirstMessage, sendSecondMessage, askForEmail, niceToMeetYou, betaSignUpFinished } from '../../functions/Landing';
 let cn = require('classnames')
+
+// prompting: {
+//   "type": "one_line",
+//   "prompt": ["Type your message"]
+// }
 
 export default class extends React.Component {
   constructor(props) {
@@ -17,6 +22,9 @@ export default class extends React.Component {
     }
     this.sendFirstMessage = sendFirstMessage.bind(this)
     this.sendSecondMessage = sendSecondMessage.bind(this)
+    this.niceToMeetYou = niceToMeetYou.bind(this)
+    this.askForEmail = askForEmail.bind(this)
+    this.betaSignUpFinished = betaSignUpFinished.bind(this)
   }
   componentDidMount() {
     let currentUser = JSON.parse(localStorage.getItem('list_user')) || false,
@@ -26,30 +34,61 @@ export default class extends React.Component {
         "from": "dexter",
         "content": `Welcome back, ${currentUser.name[0]}.`
       }]
-      this.setState({messages})
+      this.setState({messages}, () => {
+        if (!!currentUser.email === false) {
+          setTimeout(() => this.setState({typing: true}), 500)
+          setTimeout(() => this.askForEmail(), 3000)
+        } else {
+          setTimeout(() => this.setState({typing: true}), 500)
+          setTimeout(() => this.betaSignUpFinished(), 1500)
+        }
+      })
     } else {
       this.sendFirstMessage()
       .then(setTimeout(() => this.setState({typing: true}), 500))
-      .then(messages => setTimeout(messages => this.sendSecondMessage(messages), 1500))
-      .then(() => console.log(this.state.currentSubmission))
+      .then(messages => setTimeout(() => this.sendSecondMessage(), 1500))
+      // .then(() => console.log(this.state.currentSubmission))
     }
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
-    let { currentSubmission, messages } = this.state;
+    let { currentSubmission, messages, prompting } = this.state;
     if (prevState.currentSubmission !== currentSubmission) {
       messages.push({
         "from": "user",
-        "content": currentSubmission
+        "content": currentSubmission.value.join(' '),
+        "promptId": currentSubmission.promptId
       })
-      this.setState({messages, prompting: {
-        "type": "one_line",
-        "prompt": ["Type your message"]
-      },})
+      this.setState({messages},
+        () => setTimeout(() => this.setState({typing: true}), 1000)
+      )
+      // get email
+      if (currentSubmission.promptId === "14SFG304Q9") {
+        setTimeout(() => this.niceToMeetYou(), 2000)
+        setTimeout(() => this.setState({typing: true}), 3000)
+        setTimeout(() => this.askForEmail(), 5000)
+      }
+      if (currentSubmission.promptId === "12HT4IOTBQ") {
+        setTimeout(() => this.setState({typing: true}), 500)
+        setTimeout(() => this.betaSignUpFinished(), 1500)
+      }
     }
   }
   submitPromptFields(promptAnswer) {
-    localStorage.setItem('list_user', JSON.stringify({name: promptAnswer}));
-    this.setState({currentSubmission: promptAnswer.join(" "), prompting: false})
+    let currentUser = JSON.parse(localStorage.getItem('list_user')) || {}
+    if (promptAnswer.promptId === "14SFG304Q9") {
+      currentUser.name = promptAnswer.value
+    } else if (promptAnswer.promptId === "12HT4IOTBQ") {
+      currentUser.email = promptAnswer.value
+    }
+    localStorage.setItem('list_user', JSON.stringify({
+      name: currentUser.name || null,
+      email: currentUser.email || null
+    }))
+    this.setState({
+      currentSubmission: promptAnswer,
+      prompting: false
+    })
+    console.log(JSON.parse(localStorage.getItem('list_user')))
   }
   render() {
     let { messages, prompting } = this.state;
@@ -84,6 +123,7 @@ export default class extends React.Component {
             className={cn({"active": !!prompting})}
             type={prompting.type || ""}
             prompt={prompting.prompt || ""}
+            promptId={prompting.promptId || ""}
             submitPromptFields={this.submitPromptFields.bind(this) || null}
           />
         </div>
