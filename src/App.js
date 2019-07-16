@@ -14,7 +14,7 @@ class App extends React.Component {
     this.state = {
       page: "home",
       data: null,
-      app: "landing"
+      app: "landingf"
     }
   }
   switchPage = page => this.setState({page})

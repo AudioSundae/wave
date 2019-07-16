@@ -37,11 +37,21 @@ let interactions = [
 export default props => {
   return props.contact
     ? <div className="home-contact home-w-c flex col-fs-c">
-        <div className="max">
+        <div className="home-contact__top col-c-c">
+          <span>
+            Reconnect with <span>{props.contact.firstName}</span> every…
+          </span>
+          <div className="row-c-c">
+            {["2 Weeks", "Month", "2 Months"].map((x, index) => <div>{x}</div>)}
+          </div>
+        </div>
+        <div className="home-contact__inner">
           <Top {...props} />
           <Bio {...props} />
           <Interactions {...props} interactions={interactions} />
-          <Keywords {...props} />
+          {
+            // <Keywords {...props} />
+          }
         </div>
       </div>
     : <div />

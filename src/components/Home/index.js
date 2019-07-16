@@ -53,7 +53,6 @@ export default class extends React.Component {
         ])}>
           <Contact contact={data[activeContact]} onClose={this.setActiveContact} />
         </div>
-        <img src={background} alt="mountain" />
       </div>
     )
   }

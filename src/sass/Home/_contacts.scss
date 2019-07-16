@@ -1,7 +1,7 @@
 .home-contacts {
   flex: 1;
   width: 100%;
-  height: calc(100vh - 118px);
+  height: calc(100vh - 114px);
   overflow: auto;
   > div {
     @include user-select(none);
@@ -14,13 +14,16 @@
       @include border-radius(50px);
       height: 28px;
       width: 28px;
-      background: $c-blue-5;
+      background: $c-blue-10;
       margin-right: 12px;
     }
     &.active {
       background-color: $c-blue;
       color: white;
       box-shadow: none;
+      > div.img {
+        background-color: rgba(255,255,255,.25);
+      }
     }
     &:not(.active) {
       &:hover {

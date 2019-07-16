@@ -1,17 +1,16 @@
 .home-filters {
   margin-left: 28px;
   margin-right: 18px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   width: calc(100% - 46px);
   white-space: nowrap;
   color: $c-75;
   overflow-x: auto;
   overflow-y: hidden;
+  height: 64px;
   position: relative;
   > div {
-    padding-top: 28px;
-    padding-bottom: 24px;
     margin-right: 20px;
     display: inline-block;
     &:not(.active) {
